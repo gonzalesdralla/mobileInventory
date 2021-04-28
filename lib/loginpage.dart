@@ -1,39 +1,33 @@
 import 'package:flutter/material.dart';
-import 'homepage.dart';
+import 'LoginPageState.dart';
 
-class LoginPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
-          child: Column(children: [
+
+
+class LoginPage extends StatelessWidget{
+  Widget build(BuildContext context){
+  return Scaffold(
+    body: Container(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
             Padding(
               padding: EdgeInsets.fromLTRB(20.0, 90.0, 20.0, 20.0),
-              child: Text("Mobile Inventory")),
-
-            Padding(
-              padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
-              child: TextField(
-                decoration: InputDecoration(
-                border: OutlineInputBorder(), labelText: "Username"),
-              autofocus: true)),
-
-            Padding(
-              padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
-              child: TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(), 
-                  labelText: "Password"))),
-
-            FlatButton(
-              color: Colors.green[300],
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));},
-                child: Text("LOGIN"))
-            ]
-          )
+              child: Container(
+                color: Colors.green[300],
+                padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 20.0),
+                child: Text("Mobile Inventory"))),
+                
+            LoginPageState(),]
         )
-      );
-  }
+      )
+    )
+    
+  );
 }
+}
+
+
+
+
+
+
