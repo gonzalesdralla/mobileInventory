@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'homepage.dart';
+//import 'HomePage.dart';
 
 @override
 class LoginPageState extends StatefulWidget {
@@ -8,10 +8,23 @@ class LoginPageState extends StatefulWidget {
 
 class LoginPage extends State<LoginPageState>{
   final _formKey = GlobalKey<FormState>();
-  final _username = "admin";
-  final _password = "123";
+  final _username = "a";
+  final _password = "1";
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
+
+
+  @override
+   dispose(){
+      usernameController.dispose();
+      passwordController.dispose();
+      super.dispose();
+   }
+
+   @override
+   initState(){
+     super.initState();
+   }
 
  
   @override
@@ -58,10 +71,7 @@ class LoginPage extends State<LoginPageState>{
                 child: Text("LOGIN",
                           style: TextStyle(color: Colors.black)),
               onPressed: ( ) {
-                if(_formKey.currentState.validate()){
-                  Navigator.push(
-                context, MaterialPageRoute(builder: (context) => HomePage()));
-                }
+                if(_formKey.currentState.validate()){Navigator.pushNamedAndRemoveUntil(context, '/homepage', (Route<dynamic> route) => false);}
               },
                 )
             ]
