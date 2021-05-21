@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
                     child: FlatButton(
                       color: Colors.green,
                       onPressed: () {
-                        Navigator.pushNamed(context, '/viewproduct');
+                        //Navigator.pushNamed(context, '/viewproduct');
                         },
                       child: Text("View Products")))),
 

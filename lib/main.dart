@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'LoginPage.dart';
 //import 'AddProducts.dart';
-import 'drawer.dart';
-import 'homepage.dart';
+import 'Drawer.dart';
+import 'HomePage.dart';
 //import 'updateproduct.dart';
 import 'ViewProducts.dart';
 

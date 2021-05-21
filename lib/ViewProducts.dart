@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:localstorage/localstorage.dart';
+//import 'package:localstorage/localstorage.dart';
 
 class ViewProductPage extends StatelessWidget{
   final _prodItem = List<String>.generate(15, (i) => "Product ${i+1}");

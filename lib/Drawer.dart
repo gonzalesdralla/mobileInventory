@@ -13,13 +13,14 @@ class DrawerPage extends StatelessWidget {
 
           ListTile(
             title: Text("View Product"),
-            onTap: () {Navigator.pushNamed(context, '/viewproduct');}),
+            onTap: () {
+              //Navigator.pushNamed(context, '/viewproduct');}),
 
           ListTile(
             title: Text("Add Product"),
             onTap: () {
               //Navigator.pushNamed(context, '/addproduct');
-              }),
+              });
           
           /*ListTile(
             title: Text("Update Product"),
@@ -27,8 +28,10 @@ class DrawerPage extends StatelessWidget {
       
           ListTile(
             title: Text("Log Out"),
-            onTap: () {Navigator.pushNamedAndRemoveUntil(context, '/', (Route<dynamic> route) => false);}
-            )
-    ]));
+            onTap: () {
+              //Navigator.pushNamedAndRemoveUntil(context, '/', (Route<dynamic> route) => false);
+              }
+            );
+            })]));
   }
 }
